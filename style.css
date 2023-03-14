@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  margin: 1em;
+}
+
+
+#wrapper {
+  max-width: 1200px;
+  margin-left: 0 auto;
+  position: relative;
+}
+
+p, h1, h2, h3, nav, article {
+  margin-bottom: 1em;
+  color: black;
+}
+
+ul {
+    list-style: none;
+}
+
+
+ a{
+  color: deeppink;
+}
+
+a: vistied{
+  color:black;
+}
+
+a:hover{
+  color:darkblue;
+}
+
+.img-responsive{
+  width:100%;
+}
+
+/* Header Navigation*/
+header {
+  display: flex;
+  justify-content: space-between;
+  color: darkblue;
+}
+
+header h1 a{
+  color: deeppink;
+}
+
+#menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  border: solid 1px deeppink;
+  padding: 0.5em;
+}
+
+
+
+#menu li:hover ul{
+  display: block;
+  color: lightblue;
+}
+
+/*
+.topnav{
+ text-align: right;
+}*/
+
+
+/* Main styles*/
+main ul {
+  /*padding-left: 1em;*/
+  list-style-type: none;
+  /*this is to get rid of the bullet points*/
+}
+
+/* Programs Page*/
+.card-link{
+  color:#000;
+  text-decoration:none;
+  transition: all 0.5s;
+  /*transition-property: transform;
+  transition-duration: 0.5s; can add this together*/
+}
+
+.card-link: hover{
+  transform: scale(1.05);
+  box-shadow: 5px 5px 10px #888;
+}
+
+/*media query start here*/
+@media (min-width:768px) {
+  #menu {
+    display: flex;
+    position: static;
+    border: none;
+  }
+
+  #menu ul {
+    display: flex;
+  }
+
+  /*#dropmenu li {
+    display: inline;
+    float: left; thses are other ways
+  }*/
+
+
+  
+/*main layout*/
+main{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /*grid-column-gap: 1em;*/
+  grid-gap: 1em;
+}
+
+.myinfo{
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+}/* closing mdeai query*/
